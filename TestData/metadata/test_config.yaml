@@ -1,0 +1,103 @@
+# 测试配置文件 - 用于系统测试的参数配置
+
+test_scenarios:
+  basic_anomaly_detection:
+    name: "基础异常检测测试"
+    network_file: "TestData/networks/small_world_network.csv"
+    data_file: "TestData/monitoring/detailed_monitoring.csv"
+    expected_anomaly_rate: 0.05
+    algorithms: ["isolation_forest", "one_class_svm"]
+    
+  multi_node_analysis:
+    name: "多节点分析测试"
+    network_file: "TestData/networks/scale_free_network.json"
+    data_file: "TestData/monitoring/multi_node_monitoring.csv"
+    node_count: 12
+    time_range_hours: 24
+    
+  cascading_failure_test:
+    name: "级联失效分析测试"
+    network_file: "TestData/networks/random_network.gml"
+    simulation_file: "TestData/anomaly/cascading_failure_simulation.json"
+    failure_threshold: 0.8
+    max_iterations: 10
+    
+  explainability_test:
+    name: "可解释性分析测试"
+    data_file: "TestData/anomaly/labeled_anomaly_dataset.csv"
+    feature_columns: ["cpu_usage", "memory_usage", "latency_ms", "packet_loss"]
+    explanation_samples: 5
+
+performance_benchmarks:
+  data_loading:
+    csv_load_time_seconds: 2.0
+    json_load_time_seconds: 0.5
+    parquet_load_time_seconds: 0.8
+    
+  model_training:
+    isolation_forest_time_seconds: 15.0
+    one_class_svm_time_seconds: 30.0
+    ensemble_time_seconds: 45.0
+    
+  visualization_rendering:
+    network_plot_time_seconds: 5.0
+    time_series_plot_time_seconds: 3.0
+    dashboard_load_time_seconds: 10.0
+
+expected_results:
+  anomaly_detection:
+    precision_threshold: 0.7
+    recall_threshold: 0.6
+    f1_score_threshold: 0.6
+    
+  cascading_failure:
+    robustness_score_range: [0.3, 0.9]
+    critical_nodes_identified: true
+    failure_propagation_detected: true
+    
+  explainability:
+    shap_values_generated: true
+    feature_importance_calculated: true
+    explanation_confidence: 0.8
+
+test_data_validation:
+  file_existence_checks:
+    - "TestData/networks/small_world_network.csv"
+    - "TestData/networks/scale_free_network.json"
+    - "TestData/networks/random_network.gml"
+    - "TestData/monitoring/detailed_monitoring.csv"
+    - "TestData/monitoring/multi_node_monitoring.csv"
+    - "TestData/anomaly/labeled_anomaly_dataset.csv"
+    - "TestData/anomaly/cascading_failure_simulation.json"
+    
+  data_integrity_checks:
+    csv_delimiter: ","
+    json_valid_format: true
+    required_columns_present: true
+    no_null_in_critical_fields: true
+    timestamp_format_consistent: true
+    
+  size_validation:
+    min_records_detailed: 8000
+    min_records_multi_node: 1500
+    min_network_nodes: 5
+    min_network_edges: 5
+
+system_requirements:
+  python_version: ">=3.9"
+  memory_requirement_mb: 2048
+  disk_space_requirement_mb: 500
+  processing_time_limit_minutes: 30
+
+error_handling:
+  missing_files:
+    action: "generate_sample_data"
+    fallback_size: 100
+    
+  corrupted_data:
+    action: "skip_and_warn"
+    continue_with_available: true
+    
+  insufficient_memory:
+    action: "reduce_data_size"
+    sample_ratio: 0.5

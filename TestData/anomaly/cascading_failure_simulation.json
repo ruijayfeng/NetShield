@@ -1,0 +1,139 @@
+{
+  "simulation_metadata": {
+    "description": "级联失效仿真数据",
+    "network_type": "small_world",
+    "total_nodes": 20,
+    "initial_failure_nodes": [5, 12],
+    "simulation_steps": 15,
+    "failure_threshold": 0.8,
+    "recovery_probability": 0.1
+  },
+  "simulation_steps": [
+    {
+      "step": 0,
+      "timestamp": "2024-09-04 10:00:00",
+      "active_nodes": 20,
+      "failed_nodes": 0,
+      "overloaded_nodes": 0,
+      "network_efficiency": 1.0,
+      "largest_component_size": 20,
+      "node_states": {
+        "0": "active", "1": "active", "2": "active", "3": "active", "4": "active",
+        "5": "active", "6": "active", "7": "active", "8": "active", "9": "active",
+        "10": "active", "11": "active", "12": "active", "13": "active", "14": "active",
+        "15": "active", "16": "active", "17": "active", "18": "active", "19": "active"
+      },
+      "node_loads": {
+        "0": 0.45, "1": 0.52, "2": 0.38, "3": 0.61, "4": 0.49,
+        "5": 0.55, "6": 0.42, "7": 0.58, "8": 0.47, "9": 0.53,
+        "10": 0.41, "11": 0.59, "12": 0.48, "13": 0.56, "14": 0.44,
+        "15": 0.51, "16": 0.46, "17": 0.57, "18": 0.43, "19": 0.50
+      }
+    },
+    {
+      "step": 1,
+      "timestamp": "2024-09-04 10:00:30",
+      "active_nodes": 18,
+      "failed_nodes": 2,
+      "overloaded_nodes": 3,
+      "network_efficiency": 0.85,
+      "largest_component_size": 16,
+      "node_states": {
+        "0": "active", "1": "overloaded", "2": "active", "3": "active", "4": "overloaded",
+        "5": "failed", "6": "active", "7": "active", "8": "active", "9": "active",
+        "10": "active", "11": "overloaded", "12": "failed", "13": "active", "14": "active",
+        "15": "active", "16": "active", "17": "active", "18": "active", "19": "active"
+      },
+      "node_loads": {
+        "0": 0.52, "1": 0.85, "2": 0.44, "3": 0.68, "4": 0.82,
+        "5": 0.0, "6": 0.58, "7": 0.71, "8": 0.63, "9": 0.59,
+        "10": 0.55, "11": 0.87, "12": 0.0, "13": 0.72, "14": 0.61,
+        "15": 0.64, "16": 0.58, "17": 0.75, "18": 0.52, "19": 0.66
+      }
+    },
+    {
+      "step": 2,
+      "timestamp": "2024-09-04 10:01:00",
+      "active_nodes": 15,
+      "failed_nodes": 5,
+      "overloaded_nodes": 4,
+      "network_efficiency": 0.62,
+      "largest_component_size": 12,
+      "node_states": {
+        "0": "active", "1": "failed", "2": "active", "3": "overloaded", "4": "failed",
+        "5": "failed", "6": "active", "7": "overloaded", "8": "active", "9": "overloaded",
+        "10": "active", "11": "failed", "12": "failed", "13": "overloaded", "14": "active",
+        "15": "active", "16": "active", "17": "active", "18": "active", "19": "active"
+      },
+      "node_loads": {
+        "0": 0.68, "1": 0.0, "2": 0.59, "3": 0.89, "4": 0.0,
+        "5": 0.0, "6": 0.75, "7": 0.91, "8": 0.72, "9": 0.86,
+        "10": 0.71, "11": 0.0, "12": 0.0, "13": 0.88, "14": 0.78,
+        "15": 0.73, "16": 0.69, "17": 0.79, "18": 0.66, "19": 0.74
+      }
+    },
+    {
+      "step": 3,
+      "timestamp": "2024-09-04 10:01:30",
+      "active_nodes": 12,
+      "failed_nodes": 7,
+      "overloaded_nodes": 1,
+      "network_efficiency": 0.38,
+      "largest_component_size": 8,
+      "node_states": {
+        "0": "active", "1": "failed", "2": "active", "3": "failed", "4": "failed",
+        "5": "failed", "6": "active", "7": "failed", "8": "active", "9": "failed",
+        "10": "active", "11": "failed", "12": "failed", "13": "overloaded", "14": "active",
+        "15": "active", "16": "active", "17": "active", "18": "active", "19": "active"
+      },
+      "node_loads": {
+        "0": 0.77, "1": 0.0, "2": 0.73, "3": 0.0, "4": 0.0,
+        "5": 0.0, "6": 0.81, "7": 0.0, "8": 0.79, "9": 0.0,
+        "10": 0.76, "11": 0.0, "12": 0.0, "13": 0.84, "14": 0.75,
+        "15": 0.78, "16": 0.74, "17": 0.72, "18": 0.71, "19": 0.77
+      }
+    },
+    {
+      "step": 4,
+      "timestamp": "2024-09-04 10:02:00",
+      "active_nodes": 11,
+      "failed_nodes": 8,
+      "overloaded_nodes": 1,
+      "network_efficiency": 0.31,
+      "largest_component_size": 6,
+      "node_states": {
+        "0": "active", "1": "failed", "2": "active", "3": "failed", "4": "failed",
+        "5": "failed", "6": "active", "7": "failed", "8": "active", "9": "failed",
+        "10": "active", "11": "failed", "12": "failed", "13": "failed", "14": "active",
+        "15": "active", "16": "overloaded", "17": "active", "18": "active", "19": "active"
+      },
+      "node_loads": {
+        "0": 0.79, "1": 0.0, "2": 0.76, "3": 0.0, "4": 0.0,
+        "5": 0.0, "6": 0.78, "7": 0.0, "8": 0.77, "9": 0.0,
+        "10": 0.74, "11": 0.0, "12": 0.0, "13": 0.0, "14": 0.73,
+        "15": 0.75, "16": 0.85, "17": 0.71, "18": 0.72, "19": 0.76
+      }
+    }
+  ],
+  "network_metrics": {
+    "initial_robustness_score": 0.85,
+    "final_robustness_score": 0.31,
+    "robustness_degradation": 0.54,
+    "critical_failure_step": 2,
+    "recovery_attempts": 3,
+    "successful_recoveries": 0,
+    "cascade_depth": 4,
+    "affected_components": 3
+  },
+  "failure_analysis": {
+    "primary_failure_cause": "targeted_attack",
+    "secondary_effects": ["load_redistribution", "capacity_overload"],
+    "vulnerable_nodes": [1, 3, 7, 9, 11, 13],
+    "resilient_nodes": [0, 2, 6, 8, 10, 14, 15, 17, 18, 19],
+    "critical_links": [
+      {"source": 0, "target": 1, "importance": 0.92},
+      {"source": 5, "target": 6, "importance": 0.88},
+      {"source": 12, "target": 13, "importance": 0.85}
+    ]
+  }
+}

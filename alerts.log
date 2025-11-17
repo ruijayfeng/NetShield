@@ -1,0 +1,5 @@
+2025-09-03 20:24:56,501 - INFO - [INFO] 检测到网络异常 - 置信度 0.52 | Source: anomaly_detection | Category: anomaly_detection | Description: 节点 sample_node 检测到异常行为，置信度: 0.515
+2025-09-03 21:04:59,006 - ERROR - [CRITICAL] 检测到网络异常 - 置信度 0.85 | Source: anomaly_detection | Category: anomaly_detection | Description: 节点 test_node 检测到异常行为，置信度: 0.850
+主要异常特征: traffic, latency
+2025-09-03 21:05:05,401 - WARNING - [WARNING] 级联失效警告 - 失效比例 25.0% | Source: cascading_failure | Category: cascading_failure | Description: 检测到级联失效: 5/20 节点失效 (25.0%)
+传播轮次: 3

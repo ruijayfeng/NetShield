@@ -1,0 +1,76 @@
+2025-09-03 20:22:55,514 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:22:55,515 - __main__ - INFO - Initializing system components...
+2025-09-03 20:22:55,527 - __main__ - ERROR - Failed to initialize system: 'AlertManager' object has no attribute 'logger'
+2025-09-03 20:23:15,744 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:23:15,745 - __main__ - INFO - Initializing system components...
+2025-09-03 20:23:15,756 - src.alerts.alert_manager - INFO - Added notification channel: Console Notifications
+2025-09-03 20:23:15,757 - src.alerts.alert_manager - INFO - Added notification channel: Log File Notifications
+2025-09-03 20:23:15,757 - src.alerts.alert_manager - INFO - Added alert rule: 网络异常检测
+2025-09-03 20:23:15,757 - src.alerts.alert_manager - INFO - Added alert rule: 级联失效检测
+2025-09-03 20:23:15,757 - src.alerts.alert_manager - INFO - Added alert rule: 网络健康监控
+2025-09-03 20:23:15,757 - __main__ - INFO - System components initialized successfully
+2025-09-03 20:23:15,757 - __main__ - INFO - Generating network topology and data...
+2025-09-03 20:23:15,758 - __main__ - INFO - Network generated: 50 nodes, 150 edges
+2025-09-03 20:23:15,759 - __main__ - ERROR - Failed to generate network and data: Cannot cast ufunc 'multiply' output from dtype('float64') to dtype('int64') with casting rule 'same_kind'
+2025-09-03 20:23:54,058 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:23:54,058 - __main__ - INFO - Initializing system components...
+2025-09-03 20:23:54,071 - src.alerts.alert_manager - INFO - Added notification channel: Console Notifications
+2025-09-03 20:23:54,072 - src.alerts.alert_manager - INFO - Added notification channel: Log File Notifications
+2025-09-03 20:23:54,072 - src.alerts.alert_manager - INFO - Added alert rule: 网络异常检测
+2025-09-03 20:23:54,072 - src.alerts.alert_manager - INFO - Added alert rule: 级联失效检测
+2025-09-03 20:23:54,072 - src.alerts.alert_manager - INFO - Added alert rule: 网络健康监控
+2025-09-03 20:23:54,072 - __main__ - INFO - System components initialized successfully
+2025-09-03 20:23:54,072 - __main__ - INFO - Generating network topology and data...
+2025-09-03 20:23:54,073 - __main__ - INFO - Network generated: 50 nodes, 150 edges
+2025-09-03 20:23:54,079 - __main__ - INFO - Monitoring data generated: 1000 time points
+2025-09-03 20:23:54,082 - __main__ - WARNING - Data quality issues: ['Unrealistic values in traffic', 'Unrealistic values in latency']
+2025-09-03 20:24:08,166 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:24:08,167 - __main__ - INFO - Initializing system components...
+2025-09-03 20:24:08,182 - src.alerts.alert_manager - INFO - Added notification channel: Console Notifications
+2025-09-03 20:24:08,182 - src.alerts.alert_manager - INFO - Added notification channel: Log File Notifications
+2025-09-03 20:24:08,182 - src.alerts.alert_manager - INFO - Added alert rule: 网络异常检测
+2025-09-03 20:24:08,182 - src.alerts.alert_manager - INFO - Added alert rule: 级联失效检测
+2025-09-03 20:24:08,182 - src.alerts.alert_manager - INFO - Added alert rule: 网络健康监控
+2025-09-03 20:24:08,182 - __main__ - INFO - System components initialized successfully
+2025-09-03 20:24:08,182 - __main__ - INFO - Generating network topology and data...
+2025-09-03 20:24:08,183 - __main__ - INFO - Network generated: 50 nodes, 150 edges
+2025-09-03 20:24:08,189 - __main__ - INFO - Monitoring data generated: 1000 time points
+2025-09-03 20:24:08,194 - __main__ - WARNING - Data quality issues: ['Unrealistic values in traffic', 'Unrealistic values in latency']
+2025-09-03 20:24:56,175 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:24:56,175 - __main__ - INFO - Initializing system components...
+2025-09-03 20:24:56,188 - src.alerts.alert_manager - INFO - Added notification channel: Console Notifications
+2025-09-03 20:24:56,188 - src.alerts.alert_manager - INFO - Added notification channel: Log File Notifications
+2025-09-03 20:24:56,188 - src.alerts.alert_manager - INFO - Added alert rule: 网络异常检测
+2025-09-03 20:24:56,188 - src.alerts.alert_manager - INFO - Added alert rule: 级联失效检测
+2025-09-03 20:24:56,188 - src.alerts.alert_manager - INFO - Added alert rule: 网络健康监控
+2025-09-03 20:24:56,188 - __main__ - INFO - System components initialized successfully
+2025-09-03 20:24:56,188 - __main__ - INFO - Generating network topology and data...
+2025-09-03 20:24:56,189 - __main__ - INFO - Network generated: 50 nodes, 150 edges
+2025-09-03 20:24:56,193 - __main__ - INFO - Monitoring data generated: 1000 time points
+2025-09-03 20:24:56,196 - __main__ - WARNING - Data quality issues: ['Unrealistic values in traffic', 'Unrealistic values in latency']
+2025-09-03 20:24:56,196 - __main__ - INFO - Training anomaly detection models...
+2025-09-03 20:24:56,336 - __main__ - INFO - Anomaly detection models trained. Features: 5
+2025-09-03 20:24:56,478 - __main__ - INFO - Explainer initialized successfully
+2025-09-03 20:24:56,478 - __main__ - INFO - Performing anomaly detection...
+2025-09-03 20:24:56,499 - __main__ - INFO - Anomaly detection completed. Detected 241 anomalies out of 300 samples (80.3% rate)
+2025-09-03 20:24:56,501 - root - ERROR - Failed to send console notification: 'gbk' codec can't encode character '\u2139' in position 2: illegal multibyte sequence
+2025-09-03 20:24:56,501 - alert_logger - INFO - [INFO] 检测到网络异常 - 置信度 0.52 | Source: anomaly_detection | Category: anomaly_detection | Description: 节点 sample_node 检测到异常行为，置信度: 0.515
+2025-09-03 20:24:56,501 - src.alerts.alert_manager - INFO - Created alert: anomaly_detection_1756902296 - 检测到网络异常 - 置信度 0.52
+2025-09-03 20:24:56,501 - __main__ - INFO - Generating explanations for 5 instances...
+2025-09-03 20:24:56,506 - __main__ - INFO - Generated 5 explanations
+2025-09-03 20:24:56,506 - __main__ - INFO - Explanation report generated
+2025-09-03 20:24:56,506 - __main__ - INFO - Generating comprehensive report...
+2025-09-03 20:24:56,507 - __main__ - INFO - Comprehensive report generated
+2025-09-03 20:24:56,507 - root - ERROR - Analysis pipeline failed: 'gbk' codec can't encode character '\u2713' in position 421: illegal multibyte sequence
+2025-09-03 20:25:23,633 - __main__ - INFO - Network Analysis System initialized
+2025-09-03 20:25:23,633 - __main__ - INFO - Initializing system components...
+2025-09-03 20:25:23,645 - src.alerts.alert_manager - INFO - Added notification channel: Console Notifications
+2025-09-03 20:25:23,645 - src.alerts.alert_manager - INFO - Added notification channel: Log File Notifications
+2025-09-03 20:25:23,645 - src.alerts.alert_manager - INFO - Added alert rule: 网络异常检测
+2025-09-03 20:25:23,645 - src.alerts.alert_manager - INFO - Added alert rule: 级联失效检测
+2025-09-03 20:25:23,645 - src.alerts.alert_manager - INFO - Added alert rule: 网络健康监控
+2025-09-03 20:25:23,645 - __main__ - INFO - System components initialized successfully
+2025-09-03 20:25:23,645 - __main__ - INFO - Generating network topology and data...
+2025-09-03 20:25:23,646 - __main__ - INFO - Network generated: 50 nodes, 150 edges
+2025-09-03 20:25:23,650 - __main__ - INFO - Monitoring data generated: 1000 time points
+2025-09-03 20:25:23,653 - __main__ - WARNING - Data quality issues: ['Unrealistic values in traffic', 'Unrealistic values in latency']

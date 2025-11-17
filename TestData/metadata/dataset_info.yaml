@@ -1,0 +1,136 @@
+# 测试数据集信息配置文件
+dataset_info:
+  name: "Network Anomaly Detection Test Dataset"
+  version: "1.0"
+  created_date: "2024-09-04"
+  description: "复杂网络异常检测与级联失效分析系统测试数据集"
+  
+networks:
+  small_world_network:
+    file: "networks/small_world_network.csv"
+    format: "csv"
+    nodes: 10
+    edges: 30
+    type: "small_world"
+    description: "小世界网络拓扑 - CSV格式边列表"
+    features: ["source", "target", "weight", "capacity", "type"]
+    
+  scale_free_network:
+    file: "networks/scale_free_network.json"
+    format: "json"
+    nodes: 13
+    edges: 20
+    type: "scale_free"
+    description: "无标度网络拓扑 - JSON格式节点边信息"
+    features: ["nodes", "edges", "metadata"]
+    
+  random_network:
+    file: "networks/random_network.gml"
+    format: "gml"
+    nodes: 8
+    edges: 10
+    type: "random"
+    description: "随机网络拓扑 - GML格式图数据"
+    features: ["id", "label", "type", "cpu_cores", "memory_gb", "location"]
+
+monitoring_data:
+  detailed_monitoring:
+    file: "monitoring/detailed_monitoring.csv"
+    format: "csv"
+    records: 8640
+    time_range: "30 days"
+    interval: "5 minutes"
+    description: "详细监控数据 - 30天时间序列"
+    features: ["timestamp", "traffic_mbps", "latency_ms", "packet_loss_rate", 
+              "cpu_usage", "memory_usage", "disk_io_mbps", "network_errors", 
+              "temperature_c", "is_anomaly", "anomaly_score"]
+    anomaly_rate: 0.049
+    
+  multi_node_monitoring:
+    file: "monitoring/multi_node_monitoring.csv"
+    format: "csv"
+    records: 1728
+    time_range: "24 hours"
+    interval: "10 minutes"
+    nodes: 12
+    description: "多节点监控数据 - 12个节点24小时数据"
+    features: ["timestamp", "node_id", "node_type", "cpu_usage", 
+              "memory_usage", "throughput_mbps", "latency_ms", "is_anomaly"]
+    anomaly_rate: 0.03
+    
+  sample_monitoring:
+    file: "monitoring/sample_monitoring.json"
+    format: "json"
+    records: 100
+    description: "监控数据样本 - JSON格式最近100条记录"
+    
+  detailed_monitoring_parquet:
+    file: "monitoring/detailed_monitoring.parquet"
+    format: "parquet"
+    records: 8640
+    description: "详细监控数据 - Parquet格式 (高性能)"
+
+anomaly_datasets:
+  labeled_anomaly:
+    file: "anomaly/labeled_anomaly_dataset.csv"
+    format: "csv"
+    records: 30
+    description: "标记异常数据集 - 包含异常类型和严重程度标签"
+    features: ["timestamp", "node_id", "cpu_usage", "memory_usage", 
+              "network_throughput", "latency_ms", "packet_loss", "disk_io",
+              "temperature", "is_anomaly", "anomaly_type", "severity"]
+    anomaly_types: ["cpu_spike", "memory_leak", "network_congestion", 
+                   "service_failure", "traffic_spike", "system_overload"]
+    severity_levels: [0, 2, 3, 4]
+    
+  cascading_failure_simulation:
+    file: "anomaly/cascading_failure_simulation.json"
+    format: "json"
+    description: "级联失效仿真数据 - 包含仿真步骤和网络指标"
+    simulation_steps: 5
+    initial_nodes: 20
+    failure_nodes: [5, 12]
+    features: ["simulation_steps", "network_metrics", "failure_analysis"]
+
+data_usage_examples:
+  anomaly_detection:
+    primary_dataset: "monitoring/detailed_monitoring.csv"
+    training_split: 0.7
+    features: ["traffic_mbps", "latency_ms", "cpu_usage", "memory_usage"]
+    target: "is_anomaly"
+    
+  cascading_failure_analysis:
+    network_file: "networks/small_world_network.csv"
+    simulation_data: "anomaly/cascading_failure_simulation.json"
+    analysis_type: "robustness_evaluation"
+    
+  multi_node_analysis:
+    dataset: "monitoring/multi_node_monitoring.csv"
+    groupby: "node_id"
+    time_column: "timestamp"
+    features: ["cpu_usage", "memory_usage", "throughput_mbps"]
+
+quality_metrics:
+  data_completeness: 1.0
+  missing_values: 0
+  outlier_detection: "included"
+  timestamp_consistency: "valid"
+  feature_correlation: "analyzed"
+  
+file_formats:
+  csv:
+    encoding: "utf-8"
+    separator: ","
+    decimal: "."
+    
+  json:
+    encoding: "utf-8"
+    indent: 2
+    ensure_ascii: false
+    
+  gml:
+    encoding: "utf-8"
+    
+  parquet:
+    compression: "snappy"
+    engine: "auto"

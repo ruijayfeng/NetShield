@@ -1,0 +1,86 @@
+# Network Anomaly Detection System Configuration
+
+network:
+  # Network generation parameters
+  node_count: 50
+  edge_probability: 0.1
+  network_type: "small_world"  # options: small_world, scale_free, erdos_renyi
+  
+  # Small world parameters
+  k_neighbors: 6
+  rewiring_prob: 0.3
+
+data:
+  # Time series parameters
+  time_steps: 1000
+  features: ["traffic", "latency", "packet_loss", "cpu_usage", "memory_usage"]
+  anomaly_ratio: 0.05
+  noise_level: 0.1
+  
+  # Data paths
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  models_path: "data/models"
+
+anomaly_detection:
+  # Algorithm selection
+  methods: ["isolation_forest", "one_class_svm", "local_outlier_factor"]
+  ensemble: true
+  
+  # Isolation Forest parameters
+  contamination: 0.05  # 匹配测试数据的异常率
+  n_estimators: 100
+  random_state: 42
+  
+  # One Class SVM parameters
+  nu: 0.05  # 匹配测试数据的异常率
+  kernel: "rbf"
+  gamma: "scale"
+
+cascading_failure:
+  # Simulation parameters
+  initial_capacity_ratio: 1.5
+  failure_threshold: 0.8
+  max_iterations: 50
+  failure_probability: 0.05
+  
+  # Analysis parameters
+  num_simulations: 100
+  critical_nodes_count: 10
+
+explainability:
+  # SHAP parameters
+  background_samples: 100
+  max_features_display: 10
+  explanation_type: "auto"  # auto, tree, kernel, deep
+
+alerts:
+  # Alert levels and thresholds
+  thresholds:
+    info: 0.3
+    warning: 0.6
+    critical: 0.8
+    emergency: 0.9
+  
+  # Notification settings
+  enable_notifications: true
+  notification_channels: ["console", "log"]
+
+visualization:
+  # Dashboard settings
+  update_interval: 5  # seconds
+  max_history_points: 100
+  default_theme: "plotly_white"
+  
+  # Network layout
+  layout_algorithm: "spring"
+  node_size_factor: 20
+  edge_width_factor: 2
+  
+  # Colors
+  colors:
+    normal: "lightblue"
+    warning: "yellow" 
+    critical: "orange"
+    failed: "red"
+    anomaly: "purple"
